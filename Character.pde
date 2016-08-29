@@ -49,16 +49,33 @@ class Character{
     active = _active;
   }
   
-  public void setCharPos(int _xPos, int _yPos)
+  public void setCharPos(int _xPos, int _yPos){
+    xPos = _xPos;
+    yPos = _yPos;
+  }
+  
+  public void moveIn(boolean fromRight){
+    if(fromRight){
+      faceLeft = true;
+      if( xPos > width*0.75 ){
+        
+      }
+    } else {
+      faceLeft = false;
+      if( xPos < width*0.25 ){
+        
+      }
+    }
+  }
   
   public void drawCharacter(){
     pushMatrix();
     imageMode(CENTER);
-    if(mood = happy){
+    if(mood == "happy"){
       
-    } else if (mood = sad){
+    } else if (mood == "sad"){
       
-    } else if (mood = angry){
+    } else if (mood == "angry"){
       
     } else {
       
