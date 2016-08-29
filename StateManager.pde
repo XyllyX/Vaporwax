@@ -2,16 +2,25 @@ class StateManager{
   
   private String currentState;
   
-  StateManager(String _currentState){
-    currentState = _currentState;
+  StateManager(){
+    currentState = "splash";
   }
   
-  public String getState(){
+  protected String getState(){
     return currentState;
   }
   
-  public void setState(String _state){
+  protected void setState(String _state){
     currentState = _state;
+  }
+  
+  public void drawState(){
+    background(255);
+    
+    if( (keyCode == ESC || key == 'p') && (currentState == "game") ){
+      currentState = "paused";
+    }
+    
   }
   
 }
