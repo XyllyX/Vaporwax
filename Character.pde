@@ -7,6 +7,7 @@ class Character{
   private int xPos;
   private int yPos;
   private int imgVariants;
+  
   private ArrayList<PImage> neutrals;
   private ArrayList<PImage> happies;
   private ArrayList<PImage> saddies;

@@ -27,6 +27,11 @@ class StateManager{
       startMenu.drawStart();
     }
     
+    if(currentState == "splash" && keyPressed == true){
+      currentState = "game";
+      gamePlay.drawGame();
+    }
+    
     if( (keyCode == ESC || key == 'p') && (currentState == "game") ){
       currentState = "paused";
     }

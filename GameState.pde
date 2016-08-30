@@ -4,4 +4,8 @@ class GameState{
     
   }
   
+  public void drawGame(){
+    background(255);
+  }
+  
 }
