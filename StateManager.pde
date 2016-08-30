@@ -1,6 +1,9 @@
 class StateManager{
   
   private String currentState;
+  private StartState startMenu;
+  private GameState gamePlay;
+  private PauseState pauseScreen;
   
   StateManager(){
     currentState = "splash";

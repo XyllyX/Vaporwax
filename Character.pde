@@ -20,19 +20,19 @@ class Character{
     yPos = height/2;
     
     neutrals = new ArrayList<PImage>();
-    for( int i = 0; i < 4; i++ ){
+    for( int i = 0; i < 2; i++ ){
       neutrals.add( loadImage("assets/characters/" + name + "/neutral/"+nf(i, 1)+".png") );
     }
     happies = new ArrayList<PImage>();
-    for( int i = 0; i < 4; i++ ){
+    for( int i = 0; i < 2; i++ ){
       happies.add( loadImage("assets/characters/" + name + "/happy/"+nf(i, 1)+".png") );
     }
     saddies = new ArrayList<PImage>();
-    for( int i = 0; i < 4; i++ ){
+    for( int i = 0; i < 2; i++ ){
       saddies.add( loadImage("assets/characters/" + name + "/sad/"+nf(i, 1)+".png") );
     }
     angries = new ArrayList<PImage>();
-    for( int i = 0; i < 4; i++ ){
+    for( int i = 0; i < 2; i++ ){
       angries.add( loadImage("assets/characters/" + name + "/angry/"+nf(i, 1)+".png") );
     }
   }
