@@ -1,4 +1,4 @@
-# cruddyVnEngine
+# Vaporwax
 
 Just a simple engine for a visual novel style game written in Processing
 
