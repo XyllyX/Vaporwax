@@ -1,7 +1,7 @@
 private StateManager state;
 
 void setup() {
-  size(800,600);
+  size(1200,800);
   frameRate(60);
   state = new StateManager();
 }
