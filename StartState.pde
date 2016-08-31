@@ -10,9 +10,9 @@ class StartState{
   private UIButton casette;
   
   public StartState(){
-    splashScreen = loadImage("assets/scenes/menus/splash.png");
-    splashLogo = loadImage("assets/scenes/menus/splashlogo.png");
-    splashBg = loadImage("assets/scenes/menus/splashbg.png");
+    splashScreen = loadImage("assets/scenes/menus/start/splash.png");
+    splashLogo = loadImage("assets/scenes/menus/start/splashlogo.png");
+    splashBg = loadImage("assets/scenes/menus/start/splashbg.png");
     
     key1 = new UIButton(140, 230, 120, 140, true);
     key2 = new UIButton(175, 460, 140, 135, true);
