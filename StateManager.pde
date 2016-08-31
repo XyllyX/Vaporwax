@@ -13,14 +13,6 @@ class StateManager{
     pauseScreen = new PauseState();
   }
   
-  protected String getState(){
-    return currentState;
-  }
-  
-  protected void setState(String _state){
-    currentState = _state;
-  }
-  
   public void drawState(){
     background(255);
     if(currentState == "splash"){

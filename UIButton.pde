@@ -40,4 +40,12 @@ class UIButton extends UIObject{
     }
   }
   
+  public boolean getButtonTrigger(){
+    return btnTrigger;
+  }
+  
+  public void setButtonTrigger(boolean isTriggered){
+    btnTrigger = isTriggered;
+  }
+  
 }
