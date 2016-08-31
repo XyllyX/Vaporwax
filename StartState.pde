@@ -35,17 +35,18 @@ class StartState{
     popMatrix();
   }
   
+  //USE BUTTONCLICKED AGAIN ONCE FIXED
   public int startStateBtnManager(){
-    if( key1.mouseOver() && mousePressed){
+    if( key1.buttonClicked() ){
       return 1;
     }
-    if( key2.mouseOver() && mousePressed){
+    if( key2.buttonClicked() ){
       return 2;
     }
-    if( key3.mouseOver() && mousePressed){
+    if( key3.buttonClicked() ){
       return 3;
     }
-    if( casette.mouseOver() && mousePressed){
+    if( casette.buttonClicked() ){
       return 4;
     }
     return 0;

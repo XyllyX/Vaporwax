@@ -60,16 +60,17 @@ class UIButton extends UIObject{
     }
   }
   
+  /*
   public boolean getButtonTrigger(){
     return btnTrigger;
   }
   
   public void setButtonTrigger(boolean isTriggered){
     btnTrigger = isTriggered;
-  }
+  }*/
   
   public boolean mouseOver(){
-    if( mouseX < leftBound && mouseX > rightBound && mouseY < bottomBound && mouseY > topBound ){
+    if( mouseX > leftBound && mouseX < rightBound && mouseY > topBound && mouseY < bottomBound ){
       return true;
     }
     return false;

@@ -17,7 +17,7 @@ class DebugTools{
     pushStyle();
     fill(textColor);
     text( "Mouse X: " + mouseX + "\n" 
-    + "Mouse Y: " + mouseY + "\n", 0, 20 );
+    + "Mouse Y: " + mouseY + "\n", 2, 12 );
     popStyle();
     popMatrix();
   }
@@ -25,8 +25,7 @@ class DebugTools{
   private void drawInvisBtnBounds(){
     pushMatrix();
     pushStyle();
-    fill(textColor);
-    
+    fill(elementCol);
     popStyle();
     popMatrix();
   }
