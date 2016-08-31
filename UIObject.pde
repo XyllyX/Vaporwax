@@ -34,7 +34,7 @@ class UIObject{
     color2 = _color2;
   }
   
-  public void drawUIObject(){
+  protected void drawUIObject(){
     pushMatrix();
     pushStyle();
     rectMode(CENTER);

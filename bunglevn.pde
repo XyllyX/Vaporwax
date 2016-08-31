@@ -15,7 +15,7 @@ void setup() {
   size(1200,800);
   frameRate(60);
   state = new StateManager();
-  debug = new DebugTools(true);
+  debug = new DebugTools(true, false);
 }
 
 void draw() {
