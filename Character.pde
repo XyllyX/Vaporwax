@@ -4,6 +4,7 @@ class Character{
   private String mood;
   private boolean active;
   private boolean faceLeft;
+  private boolean introduced;
   private int xPos;
   private int yPos;
   private int imgVariants;
@@ -18,6 +19,7 @@ class Character{
     mood = "neutral";
     active = false;
     faceLeft = false;
+    introduced = false;
     xPos = -400;
     yPos = height/2;
     imgVariants = _imgVariants;
@@ -73,6 +75,14 @@ class Character{
         
       }
     }
+  }
+  
+  public boolean getIntroduced(){
+    return introduced;
+  }
+  
+  public void setIntroduced(boolean isIntroduced){
+    introduced = isIntroduced;
   }
   
   public void drawCharacter(){

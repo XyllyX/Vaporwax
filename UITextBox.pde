@@ -1,6 +1,6 @@
 class UITextBox extends UIObject {
   
-  UITextBox(){
+  public UITextBox(){
     
   }
   
