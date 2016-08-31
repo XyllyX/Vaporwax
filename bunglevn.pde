@@ -1,5 +1,7 @@
 /*TODO:
 *
+* implement button
+* basic main menu
 * implement character class in gamestate
 * basic gameplay working
 * read from script-style input text file
@@ -15,7 +17,7 @@ void setup() {
   size(1200,800);
   frameRate(60);
   state = new StateManager();
-  debug = new DebugTools(true, false);
+  debug = new DebugTools(true, true);
 }
 
 void draw() {

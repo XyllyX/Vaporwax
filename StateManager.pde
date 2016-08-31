@@ -2,6 +2,7 @@ class StateManager{
   
   private String currentState;
   private StartState startMenu;
+  private MainMenuState mainMenu;
   private GameState gamePlay;
   private PauseState pauseScreen;
   
@@ -9,6 +10,7 @@ class StateManager{
     currentState = "splash";
     
     startMenu = new StartState();
+    mainMenu = new MainMenuState();
     gamePlay = new GameState();
     pauseScreen = new PauseState();
   }
@@ -20,8 +22,8 @@ class StateManager{
     }
     
     if(currentState == "splash" && keyPressed == true){
-      currentState = "game";
-      gamePlay.drawGame();
+      currentState = "menu";
+      mainMenu.drawMainMenu();
     }
     
     if( (keyCode == ESC || key == 'p') && (currentState == "game") ){
