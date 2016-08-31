@@ -75,4 +75,11 @@ class UIButton extends UIObject{
     return false;
   }
   
+  public boolean buttonClicked(){
+    if( this.mouseOver() && mousePressed ){
+      return true;
+    }
+    return false;
+  }
+  
 }

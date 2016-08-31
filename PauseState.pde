@@ -4,4 +4,8 @@ class PauseState{
     
   }
   
+  public void drawPause(){
+    
+  }
+  
 }

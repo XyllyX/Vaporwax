@@ -21,6 +21,7 @@ void setup() {
 }
 
 void draw() {
+  state.updateState();
   state.drawState();
   debug.drawDebugInfo();
 }
