@@ -38,7 +38,7 @@ class UIObject{
     pushMatrix();
     pushStyle();
     rectMode(CENTER);
-    fill(color2);
+    fill(color2, 126);
     rect(xPos, yPos, eWidth, eHeight);
     popStyle();
     popMatrix();

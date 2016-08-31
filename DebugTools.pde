@@ -1,11 +1,15 @@
 class DebugTools{
   
   color textColor;
+  color elementCol;
   boolean showMousePosition;
+  boolean showInvisibleButtons;
   
-  public DebugTools(boolean _showMousePosition){
+  public DebugTools(boolean _showMousePosition, boolean _showInvisibleButtons){
     textColor = color(255, 0, 0);
+    elementCol = color(255, 0, 0, 126);
     showMousePosition = _showMousePosition;
+    showInvisibleButtons = _showInvisibleButtons;
   }
   
   private void drawMousePosition(){
@@ -18,9 +22,21 @@ class DebugTools{
     popMatrix();
   }
   
+  private void drawInvisBtnBounds(){
+    pushMatrix();
+    pushStyle();
+    fill(textColor);
+    
+    popStyle();
+    popMatrix();
+  }
+  
   public void drawDebugInfo(){
     if(showMousePosition){
       drawMousePosition();
+    }
+    if(showInvisibleButtons){
+      drawInvisBtnBounds();
     }
   }
   
