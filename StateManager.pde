@@ -5,7 +5,7 @@ class StateManager{
   private GameState gamePlay;
   private PauseState pauseScreen;
   
-  StateManager(){
+  public StateManager(){
     currentState = "splash";
     
     startMenu = new StartState();

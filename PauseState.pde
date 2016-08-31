@@ -1,6 +1,6 @@
 class PauseState{
   
-  PauseState(){
+  public PauseState(){
     
   }
   

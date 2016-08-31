@@ -2,7 +2,7 @@ class StartState{
   
   private PImage splashScreen;
   
-  StartState(){
+  public StartState(){
     splashScreen = loadImage("assets/scenes/menus/splash.png");
   }
   

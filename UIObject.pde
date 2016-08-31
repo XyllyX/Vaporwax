@@ -1,11 +1,18 @@
 class UIObject{
   
-  float xPos;
-  float yPos;
-  float eWidth;
-  float eHeight;
+  protected float xPos;
+  protected float yPos;
+  protected float eWidth;
+  protected float eHeight;
   
-  UIObject(float _xPos, float _yPos, float _eWidth, float _eHeight){
+  public UIObject(){
+    xPos = width/2;
+    yPos = height/2;
+    eWidth = 50;
+    eHeight = 50;
+  }
+  
+  public UIObject(float _xPos, float _yPos, float _eWidth, float _eHeight){
     xPos = _xPos;
     yPos = _yPos;
     eWidth = _eWidth;

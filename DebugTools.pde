@@ -3,7 +3,7 @@ class DebugTools{
   color textColor;
   boolean showMousePosition;
   
-  DebugTools(boolean _showMousePosition){
+  public DebugTools(boolean _showMousePosition){
     textColor = color(255, 0, 0);
     showMousePosition = _showMousePosition;
   }

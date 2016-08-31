@@ -13,7 +13,7 @@ class Character{
   private ArrayList<PImage> saddies;
   private ArrayList<PImage> angries;
   
-  Character(String _name, int _imgVariants){
+  public Character(String _name, int _imgVariants){
     name = _name;
     mood = "neutral";
     active = false;

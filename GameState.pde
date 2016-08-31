@@ -1,6 +1,6 @@
 class GameState{
   
-  GameState(){
+  public GameState(){
   }
   
   public void drawGame(){
