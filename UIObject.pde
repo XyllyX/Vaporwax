@@ -35,7 +35,13 @@ class UIObject{
   }
   
   public void drawUIObject(){
-    rect
+    pushMatrix();
+    pushStyle();
+    rectMode(CENTER);
+    fill(color2);
+    rect(xPos, yPos, eWidth, eHeight);
+    popStyle();
+    popMatrix();
   }
   
 }
