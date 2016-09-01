@@ -1,11 +1,11 @@
 class GameState{
   
-  Character tru;
+  Character ann;
   
   //hardcoding test scene for now, will otherwise use script based system
   //may use gamestates as chapters
   public GameState(){
-    tru = new Character("tru", 2);
+    ann = new Character("Ann", 2);
   }
   
   public void drawGame(){

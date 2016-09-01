@@ -8,8 +8,11 @@ void setup() {
   debug = new DebugTools(true, true);
 }
 
-void draw() {
+void mousePressed(){
   state.updateState();
+}
+
+void draw() {
   state.drawState();
   debug.drawDebugInfo();
 }

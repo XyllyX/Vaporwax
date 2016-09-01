@@ -30,6 +30,9 @@ class MainMenuState{
   }
   
   public int menuButtonManager(){
+    if( playButton.buttonClicked() ){
+      return 1;
+    }
     return 0;
   }
   
