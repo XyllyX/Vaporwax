@@ -69,16 +69,19 @@ class Character{
     faceLeft = _faceLeft;
   }
   
+  //add a fade in
   public void moveIn(boolean fromRight, float moveSpeed){
     if(fromRight){
       faceLeft = true;
       if( xPos > width*0.8 ){
-        
+        //make this work
+        tint(255, dist(xPos, 0, width, 0) );
       }
     } else {
       faceLeft = false;
       if( xPos < width*0.2 ){
         xPos += moveSpeed;
+        tint(255, xPos);
       }
     }
   }
