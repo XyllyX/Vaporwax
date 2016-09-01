@@ -100,31 +100,31 @@ class Character{
     imageMode(CENTER);
     if(mood == "happy"){
       if(talking){
-        image(happies.get(1), xPos, yPos, 0, height);
+        image(happies.get(1), xPos, yPos, happies.get(1).width, neutrals.get(1).height);
       } else {
-      image(happies.get(0), xPos, yPos, 0, height);
+      image(happies.get(0), xPos, yPos, happies.get(0).width, neutrals.get(0).height);
       }
     } 
     
     else if (mood == "sad"){
       if(talking){
-        image(saddies.get(1), xPos, yPos, 0, height);
+        image(saddies.get(1), xPos, yPos, saddies.get(1).width, neutrals.get(1).height);
       } else {
-      image(saddies.get(0), xPos, yPos, 0, height);
+      image(saddies.get(0), xPos, yPos, saddies.get(0).width, neutrals.get(0).height);
       }
     } 
     
     else if (mood == "angry"){
       if(talking){
-        image(angries.get(1), xPos, yPos, 0, height);
+        image(angries.get(1), xPos, yPos, angries.get(1).width, neutrals.get(1).height);
       } else {
-      image(angries.get(0), xPos, yPos, 0, height);
+      image(angries.get(0), xPos, yPos, angries.get(0).width, neutrals.get(0).height);
       }
     } 
     
     else {
       if(talking){
-        image(neutrals.get(1), xPos, yPos, neutrals.get(0).width, neutrals.get(0).height);
+        image(neutrals.get(1), xPos, yPos, neutrals.get(1).width, neutrals.get(1).height);
       } else {
       image(neutrals.get(0), xPos, yPos, neutrals.get(0).width, neutrals.get(0).height);
       }

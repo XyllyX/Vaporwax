@@ -15,8 +15,22 @@ class GameState{
     if(key == ' '){
       ann.setTalking(true);
     }
-    if(key == 'n'){
+    if(key == 't'){
       ann.setTalking(false);
+    }
+    
+    //testing mood changing
+    if(key == 'h'){
+      ann.setMood("happy");
+    }
+    if(key == 's'){
+      ann.setMood("sad");
+    }
+    if(key == 'a'){
+      ann.setMood("angry");
+    }
+    if(key == 'n'){
+      ann.setMood("neutral");
     }
   }
   
