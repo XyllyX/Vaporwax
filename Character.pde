@@ -25,6 +25,7 @@ class Character{
     yPos = (height/2) + height*0.1;
     imgVariants = _imgVariants;
     
+    //need to simplify this mess
     neutrals = new ArrayList<PImage>();
     for( int i = 0; i < imgVariants; i++ ){
       neutrals.add( loadImage("assets/characters/" + name + "/neutral/"+nf(i, 1)+".png") );
@@ -94,6 +95,7 @@ class Character{
     talking = _talking;
   }
   
+  //must simplify this too
   public void drawCharacter(){
     pushMatrix();
     pushStyle();
