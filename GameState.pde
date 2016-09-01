@@ -10,8 +10,14 @@ class GameState{
   
   public void drawGame(){
     background(255);
-    ann.moveIn(false);
+    ann.moveIn(false, 4);
     ann.drawCharacter();
+    if(key == ' '){
+      ann.setTalking(true);
+    }
+    if(key == 'n'){
+      ann.setTalking(false);
+    }
   }
   
 }

@@ -21,29 +21,29 @@ class Character{
     active = false;
     faceLeft = false;
     introduced = false;
-    xPos = -400;
-    yPos = height/2;
+    xPos = -250;
+    yPos = (height/2) + height*0.1;
     imgVariants = _imgVariants;
     
     neutrals = new ArrayList<PImage>();
     for( int i = 0; i < imgVariants; i++ ){
       neutrals.add( loadImage("assets/characters/" + name + "/neutral/"+nf(i, 1)+".png") );
-      neutrals.get(i).resize(0, int(height * 0.75) );
+      neutrals.get(i).resize(0, int(height * 0.8) );
     }
     happies = new ArrayList<PImage>();
     for( int i = 0; i < imgVariants; i++ ){
       happies.add( loadImage("assets/characters/" + name + "/happy/"+nf(i, 1)+".png") );
-      happies.get(i).resize(0, int(height * 0.75) );
+      happies.get(i).resize(0, int(height * 0.8) );
     }
     saddies = new ArrayList<PImage>();
     for( int i = 0; i < imgVariants; i++ ){
       saddies.add( loadImage("assets/characters/" + name + "/sad/"+nf(i, 1)+".png") );
-      saddies.get(i).resize(0, int(height * 0.75) );
+      saddies.get(i).resize(0, int(height * 0.8) );
     }
     angries = new ArrayList<PImage>();
     for( int i = 0; i < imgVariants; i++ ){
       angries.add( loadImage("assets/characters/" + name + "/angry/"+nf(i, 1)+".png") );
-      angries.get(i).resize(0, int(height * 0.75) );
+      angries.get(i).resize(0, int(height * 0.8) );
     }
   }
   
@@ -59,7 +59,7 @@ class Character{
     active = _active;
   }
   
-  public void setCharPos(int _xPos, int _yPos){
+  public void setCharPos(float _xPos, float _yPos){
     xPos = _xPos;
     yPos = _yPos;
   }
@@ -68,16 +68,16 @@ class Character{
     faceLeft = _faceLeft;
   }
   
-  public void moveIn(boolean fromRight){
+  public void moveIn(boolean fromRight, float moveSpeed){
     if(fromRight){
       faceLeft = true;
-      if( xPos > width*0.75 ){
+      if( xPos > width*0.8 ){
         
       }
     } else {
       faceLeft = false;
-      if( xPos < width*0.25 ){
-        xPos+=2;
+      if( xPos < width*0.2 ){
+        xPos += moveSpeed;
       }
     }
   }
@@ -96,6 +96,7 @@ class Character{
   
   public void drawCharacter(){
     pushMatrix();
+    pushStyle();
     imageMode(CENTER);
     if(mood == "happy"){
       if(talking){
@@ -123,11 +124,12 @@ class Character{
     
     else {
       if(talking){
-        image(neutrals.get(1), xPos, yPos, 0, height);
+        image(neutrals.get(1), xPos, yPos, neutrals.get(0).width, neutrals.get(0).height);
       } else {
-      image(neutrals.get(0), xPos, yPos, 0, height);
+      image(neutrals.get(0), xPos, yPos, neutrals.get(0).width, neutrals.get(0).height);
       }
     }
+    popStyle();
     popMatrix();
   }
   
