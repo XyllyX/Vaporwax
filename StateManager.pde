@@ -17,14 +17,6 @@ class StateManager{
     gameOver = new GameOverState();
   }
   
-  public String getState(){
-    return currentState;
-  }
-  
-  public void setState(String nextState){
-    currentState = nextState;
-  }
-  
   public void updateState() {
     if(currentState == "splash"){
       if( startMenu.startStateBtnManager() == 1 ){
@@ -35,6 +27,9 @@ class StateManager{
     }
     
     if(currentState == "menu") {
+      if( mainMenu.menuButtonManager() == 1 ){
+        
+      }
     }
     
     if(currentState == "game")  {

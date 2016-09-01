@@ -35,7 +35,6 @@ class StartState{
     popMatrix();
   }
   
-  //USE BUTTONCLICKED AGAIN ONCE FIXED
   public int startStateBtnManager(){
     if( key1.buttonClicked() ){
       return 1;
