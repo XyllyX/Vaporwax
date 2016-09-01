@@ -89,13 +89,13 @@ class Character{
     pushMatrix();
     imageMode(CENTER);
     if(mood == "happy"){
-      
+      image(happies.get(0), 0, height);
     } else if (mood == "sad"){
-      
+      image(saddies.get(0), 0, height);
     } else if (mood == "angry"){
-      
+      image(angries.get(0), 0, height);
     } else {
-      
+      image(neutrals.get(0), 0, height);
     }
     popMatrix();
   }
