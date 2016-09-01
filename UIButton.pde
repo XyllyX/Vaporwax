@@ -1,6 +1,5 @@
 class UIButton extends UIObject{
   
-  private boolean btnTrigger;
   private float leftBound;
   private float rightBound;
   private float topBound;
@@ -9,7 +8,6 @@ class UIButton extends UIObject{
   public UIButton() {
     eWidth = 100;
     eHeight = 100;
-    btnTrigger = false;
     leftBound = xPos - eWidth/2;
     rightBound = xPos + eWidth/2;
     topBound = yPos - eHeight/2;
@@ -23,7 +21,6 @@ class UIButton extends UIObject{
     eHeight = _eHeight;
     color1 = color(255);
     color2 = color(0);
-    btnTrigger = false;
     leftBound = xPos - eWidth/2;
     rightBound = xPos + eWidth/2;
     topBound = yPos - eHeight/2;
@@ -37,7 +34,6 @@ class UIButton extends UIObject{
     eHeight = _eHeight;
     color1 = _color1;
     color2 = _color2;
-    btnTrigger = false;
     leftBound = xPos - eWidth/2;
     rightBound = xPos + eWidth/2;
     topBound = yPos - eHeight/2;
@@ -49,7 +45,6 @@ class UIButton extends UIObject{
     yPos = _yPos;
     eWidth = _eWidth;
     eHeight = _eHeight;
-    btnTrigger = false;
     leftBound = xPos - eWidth/2;
     rightBound = xPos + eWidth/2;
     topBound = yPos - eHeight/2;
@@ -59,15 +54,6 @@ class UIButton extends UIObject{
       color2 = color(0, 0, 0, 0);
     }
   }
-  
-  /*
-  public boolean getButtonTrigger(){
-    return btnTrigger;
-  }
-  
-  public void setButtonTrigger(boolean isTriggered){
-    btnTrigger = isTriggered;
-  }*/
   
   public boolean mouseOver(){
     if( mouseX > leftBound && mouseX < rightBound && mouseY > topBound && mouseY < bottomBound ){

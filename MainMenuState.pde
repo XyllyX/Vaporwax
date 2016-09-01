@@ -9,6 +9,8 @@ class MainMenuState{
   UIButton quitButton;
   
   public MainMenuState(){
+    //what a horrible mess
+    //will be replaced with a drawn menu afterwards, just a organized placeholder for the moment
     playButton = new UIButton( 900, (height * 0.2) - (height/5)/2, 200, (height * 0.2)*0.8 );
     loadSaveButton = new UIButton( 900, (height * 0.4) - (height/5)/2, 200, (height * 0.2)*0.8 );
     deleteSaveButton = new UIButton( 900, (height * 0.6) - (height/5)/2, 200, (height * 0.2)*0.8 );
@@ -17,11 +19,14 @@ class MainMenuState{
   }
   
   public void drawMainMenu(){
+    pushStyle();
+    noStroke();
     playButton.drawUIObject();
     loadSaveButton.drawUIObject();
     deleteSaveButton.drawUIObject();
     optionsButton.drawUIObject();
     quitButton.drawUIObject();
+    popStyle();
   }
   
   public int menuButtonManager(){
