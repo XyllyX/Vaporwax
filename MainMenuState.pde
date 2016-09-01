@@ -10,7 +10,7 @@ class MainMenuState{
   
   public MainMenuState(){
     //what a horrible mess
-    //will be replaced with a drawn menu afterwards, just a organized placeholder for the moment
+    //will be replaced with a drawn menu afterwards, just a placeholder for the moment
     playButton = new UIButton( 900, (height * 0.2) - (height/5)/2, 200, (height * 0.2)*0.8 );
     loadSaveButton = new UIButton( 900, (height * 0.4) - (height/5)/2, 200, (height * 0.2)*0.8 );
     deleteSaveButton = new UIButton( 900, (height * 0.6) - (height/5)/2, 200, (height * 0.2)*0.8 );

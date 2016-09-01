@@ -28,7 +28,7 @@ class StateManager{
     
     if(currentState == "menu") {
       if( mainMenu.menuButtonManager() == 1 ){
-        
+        currentState = "game";
       }
     }
     
