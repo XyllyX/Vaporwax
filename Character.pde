@@ -5,8 +5,9 @@ class Character{
   private boolean active;
   private boolean faceLeft;
   private boolean introduced;
-  private int xPos;
-  private int yPos;
+  private boolean talking;
+  private float xPos;
+  private float yPos;
   private int imgVariants;
   
   private ArrayList<PImage> neutrals;
@@ -27,18 +28,22 @@ class Character{
     neutrals = new ArrayList<PImage>();
     for( int i = 0; i < imgVariants; i++ ){
       neutrals.add( loadImage("assets/characters/" + name + "/neutral/"+nf(i, 1)+".png") );
+      neutrals.get(i).resize(0, int(height * 0.75) );
     }
     happies = new ArrayList<PImage>();
     for( int i = 0; i < imgVariants; i++ ){
       happies.add( loadImage("assets/characters/" + name + "/happy/"+nf(i, 1)+".png") );
+      happies.get(i).resize(0, int(height * 0.75) );
     }
     saddies = new ArrayList<PImage>();
     for( int i = 0; i < imgVariants; i++ ){
       saddies.add( loadImage("assets/characters/" + name + "/sad/"+nf(i, 1)+".png") );
+      saddies.get(i).resize(0, int(height * 0.75) );
     }
     angries = new ArrayList<PImage>();
     for( int i = 0; i < imgVariants; i++ ){
       angries.add( loadImage("assets/characters/" + name + "/angry/"+nf(i, 1)+".png") );
+      angries.get(i).resize(0, int(height * 0.75) );
     }
   }
   
@@ -72,7 +77,7 @@ class Character{
     } else {
       faceLeft = false;
       if( xPos < width*0.25 ){
-        
+        xPos+=2;
       }
     }
   }
@@ -85,17 +90,43 @@ class Character{
     introduced = isIntroduced;
   }
   
+  public void setTalking(boolean _talking){
+    talking = _talking;
+  }
+  
   public void drawCharacter(){
     pushMatrix();
     imageMode(CENTER);
     if(mood == "happy"){
-      image(happies.get(0), 0, height);
-    } else if (mood == "sad"){
-      image(saddies.get(0), 0, height);
-    } else if (mood == "angry"){
-      image(angries.get(0), 0, height);
-    } else {
-      image(neutrals.get(0), 0, height);
+      if(talking){
+        image(happies.get(1), xPos, yPos, 0, height);
+      } else {
+      image(happies.get(0), xPos, yPos, 0, height);
+      }
+    } 
+    
+    else if (mood == "sad"){
+      if(talking){
+        image(saddies.get(1), xPos, yPos, 0, height);
+      } else {
+      image(saddies.get(0), xPos, yPos, 0, height);
+      }
+    } 
+    
+    else if (mood == "angry"){
+      if(talking){
+        image(angries.get(1), xPos, yPos, 0, height);
+      } else {
+      image(angries.get(0), xPos, yPos, 0, height);
+      }
+    } 
+    
+    else {
+      if(talking){
+        image(neutrals.get(1), xPos, yPos, 0, height);
+      } else {
+      image(neutrals.get(0), xPos, yPos, 0, height);
+      }
     }
     popMatrix();
   }

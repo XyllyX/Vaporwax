@@ -10,7 +10,8 @@ class GameState{
   
   public void drawGame(){
     background(255);
-    
+    ann.moveIn(false);
+    ann.drawCharacter();
   }
   
 }
