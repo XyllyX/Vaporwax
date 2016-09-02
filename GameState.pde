@@ -1,17 +1,28 @@
 class GameState{
   
+  PImage backgroundImage;
   Characters ann;
   UITextBox textBox;
   
   //hardcoding test scene for now, will otherwise use script based system
   //may use gamestates as chapters
   public GameState(){
+    backgroundImage = loadImage("assets/scenes/locations/station.png");
+    backgroundImage.resize(width, height);
     ann = new Characters("Ann", 2);
     textBox = new UITextBox();
   }
   
   public void drawGame(){
+    
+    pushMatrix();
+    pushStyle();
+    
     background(255);
+    
+    imageMode(CENTER);
+    image(backgroundImage, width/2, height/2);
+    
     ann.moveIn(false, 4);
     ann.drawCharacter();
     if(key == ' '){
@@ -36,6 +47,10 @@ class GameState{
     }
     
     textBox.drawUIObject( (255 * 0.4) );
+    
+    popMatrix();
+    popStyle();
+    
   }
   
 }

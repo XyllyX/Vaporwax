@@ -5,7 +5,7 @@ void setup() {
   size(1200,800);
   frameRate(60);
   state = new StateManager();
-  debug = new DebugTools(true, true);
+  debug = new DebugTools(false, false);
 }
 
 void mousePressed(){
