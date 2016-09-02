@@ -47,7 +47,7 @@ class GameState{
     }
     
     textBox.drawUIObject( (255 * 0.7) );
-    textBox.drawText("Kill yourself.");
+    textBox.drawText("Just kidding!");
     
     popMatrix();
     popStyle();
