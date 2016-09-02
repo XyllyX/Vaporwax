@@ -10,7 +10,7 @@ class GameState{
     backgroundImage = loadImage("assets/scenes/locations/station.png");
     backgroundImage.resize(width, height);
     ann = new Characters("Ann", 2);
-    textBox = new UITextBox();
+    textBox = new UITextBox("Aller-Rg", 28);
   }
   
   public void drawGame(){
@@ -47,6 +47,7 @@ class GameState{
     }
     
     textBox.drawUIObject( (255 * 0.4) );
+    textBox.drawText("'Eugh, gross.'");
     
     popMatrix();
     popStyle();
