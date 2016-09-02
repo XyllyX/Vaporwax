@@ -38,7 +38,19 @@ class UIObject{
     pushMatrix();
     pushStyle();
     rectMode(CENTER);
+    noStroke();
     fill(color2, 126);
+    rect(xPos, yPos, eWidth, eHeight);
+    popStyle();
+    popMatrix();
+  }
+  
+  protected void drawUIObject(float alpha){
+    pushMatrix();
+    pushStyle();
+    rectMode(CENTER);
+    noStroke();
+    fill(color2, alpha);
     rect(xPos, yPos, eWidth, eHeight);
     popStyle();
     popMatrix();

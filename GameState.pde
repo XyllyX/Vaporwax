@@ -1,11 +1,13 @@
 class GameState{
   
-  Character ann;
+  Characters ann;
+  UITextBox textBox;
   
   //hardcoding test scene for now, will otherwise use script based system
   //may use gamestates as chapters
   public GameState(){
-    ann = new Character("Ann", 2);
+    ann = new Characters("Ann", 2);
+    textBox = new UITextBox();
   }
   
   public void drawGame(){
@@ -32,6 +34,8 @@ class GameState{
     if(key == 'n'){
       ann.setMood("neutral");
     }
+    
+    textBox.drawUIObject( (255 * 0.4) );
   }
   
 }

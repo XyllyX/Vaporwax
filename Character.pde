@@ -1,4 +1,4 @@
-class Character{
+class Characters{
   
   private String name;
   private String mood;
@@ -15,36 +15,36 @@ class Character{
   private ArrayList<PImage> saddies;
   private ArrayList<PImage> angries;
   
-  public Character(String _name, int _imgVariants){
+  public Characters(String _name, int _imgVariants){
     name = _name;
     mood = "neutral";
     active = false;
     faceLeft = false;
     introduced = false;
     xPos = -250;
-    yPos = (height/2) + height*0.1;
+    yPos = (height/2) + height*0.05;
     imgVariants = _imgVariants;
     
     //need to simplify this mess
     neutrals = new ArrayList<PImage>();
     for( int i = 0; i < imgVariants; i++ ){
       neutrals.add( loadImage("assets/characters/" + name + "/neutral/"+nf(i, 1)+".png") );
-      neutrals.get(i).resize(0, int(height * 0.8) );
+      neutrals.get(i).resize(0, int(height * 0.9) );
     }
     happies = new ArrayList<PImage>();
     for( int i = 0; i < imgVariants; i++ ){
       happies.add( loadImage("assets/characters/" + name + "/happy/"+nf(i, 1)+".png") );
-      happies.get(i).resize(0, int(height * 0.8) );
+      happies.get(i).resize(0, int(height * 0.9) );
     }
     saddies = new ArrayList<PImage>();
     for( int i = 0; i < imgVariants; i++ ){
       saddies.add( loadImage("assets/characters/" + name + "/sad/"+nf(i, 1)+".png") );
-      saddies.get(i).resize(0, int(height * 0.8) );
+      saddies.get(i).resize(0, int(height * 0.9) );
     }
     angries = new ArrayList<PImage>();
     for( int i = 0; i < imgVariants; i++ ){
       angries.add( loadImage("assets/characters/" + name + "/angry/"+nf(i, 1)+".png") );
-      angries.get(i).resize(0, int(height * 0.8) );
+      angries.get(i).resize(0, int(height * 0.9) );
     }
   }
   

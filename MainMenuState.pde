@@ -20,7 +20,6 @@ class MainMenuState{
   
   public void drawMainMenu(){
     pushStyle();
-    noStroke();
     playButton.drawUIObject();
     loadSaveButton.drawUIObject();
     deleteSaveButton.drawUIObject();
