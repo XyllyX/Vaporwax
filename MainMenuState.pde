@@ -2,11 +2,11 @@ class MainMenuState{
   
   //consider putting buttons into an array
   //although variable names allow readability
-  UIButton playButton;
-  UIButton loadSaveButton;
-  UIButton deleteSaveButton;
-  UIButton optionsButton;
-  UIButton quitButton;
+  private UIButton playButton;
+  private UIButton loadSaveButton;
+  private UIButton deleteSaveButton;
+  private UIButton optionsButton;
+  private UIButton quitButton;
   
   public MainMenuState(){
     //what a horrible mess

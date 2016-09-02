@@ -1,8 +1,8 @@
 class GameState{
   
-  PImage backgroundImage;
-  Characters ann;
-  UITextBox textBox;
+  private PImage backgroundImage;
+  private Characters ann;
+  private UITextBox textBox;
   
   //hardcoding test scene for now, will otherwise use script based system
   //may use gamestates as chapters
@@ -10,7 +10,7 @@ class GameState{
     backgroundImage = loadImage("assets/scenes/locations/station.png");
     backgroundImage.resize(width, height);
     ann = new Characters("Ann", 2);
-    textBox = new UITextBox("Aller-Rg", 28);
+    textBox = new UITextBox("Cicle_Gordita", 28);
   }
   
   public void drawGame(){
@@ -46,8 +46,8 @@ class GameState{
       ann.setMood("neutral");
     }
     
-    textBox.drawUIObject( (255 * 0.4) );
-    textBox.drawText("'Eugh, gross.'");
+    textBox.drawUIObject( (255 * 0.7) );
+    textBox.drawText("Kill yourself.");
     
     popMatrix();
     popStyle();

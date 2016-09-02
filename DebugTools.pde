@@ -1,9 +1,9 @@
 class DebugTools{
   
-  color textColor;
-  color elementCol;
-  boolean showMousePosition;
-  boolean showInvisibleButtons;
+  private color textColor;
+  private color elementCol;
+  private boolean showMousePosition;
+  private boolean showInvisibleButtons;
   
   public DebugTools(boolean _showMousePosition, boolean _showInvisibleButtons){
     textColor = color(255, 0, 0);
